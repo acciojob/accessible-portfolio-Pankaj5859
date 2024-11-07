@@ -4,12 +4,59 @@
 
 <head>
 	<link rel="stylesheet" href="styles.css">
+	<title>Accessible Portfolio</title>
 </head>
 
 <body>
 	<!-- the entire body must be written by student -->
     <script type="text/javascript" src="./script.js">
 </script>
+	<header role="banner">
+        <nav role="navigation" aria-label="Main navigation">
+            <ul>
+                <li><a href="#about" role="link" aria-label="About me section">About Me</a></li>
+                <li><a href="#projects" role="link" aria-label="Portfolio projects">Projects</a></li>
+                <li><a href="#contact" role="link" aria-label="Contact information">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+	 <main role="main">
+        <!-- About Section -->
+        <section id="about" role="region" aria-labelledby="about-heading">
+            <h1 id="about-heading">About Me</h1>
+            <p>I am a passionate web developer with a focus on accessibility and user experience.</p>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" role="region" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">My Projects</h2>
+            <div class="project" role="article" aria-labelledby="project1-title">
+                <h3 id="project1-title">Project 1: Accessible Website</h3>
+                <p>Description: A website designed with full accessibility in mind, using ARIA roles, semantic HTML, and WCAG guidelines.</p>
+                <a href="https://example.com" role="link" aria-label="Visit Accessible Website">View Project</a>
+            </div>
+            <div class="project" role="article" aria-labelledby="project2-title">
+                <h3 id="project2-title">Project 2: E-commerce Site</h3>
+                <p>Description: An accessible e-commerce site with keyboard navigation, screen reader support, and proper form labeling.</p>
+                <a href="https://example.com" role="link" aria-label="Visit E-commerce Site">View Project</a>
+            </div>
+        </section>
+		  <section id="contact" role="region" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact Me</h2>
+            <form action="#" method="POST" role="form" aria-labelledby="contact-heading">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" aria-required="true" placeholder="Your Name">
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" aria-required="true" placeholder="Your Email">
+                
+                <label for="message">Message</label>
+                <textarea id="message" name="message" aria-required="true" placeholder="Your Message"></textarea>
+                
+                <button type="submit" aria-label="Submit the contact form">Send Message</button>
+            </form>
+        </section>
+    </main>
 
 </body>
 
