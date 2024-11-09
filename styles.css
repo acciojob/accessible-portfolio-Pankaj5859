@@ -1,2 +1,11 @@
 
 /* Your CSS Code here. */
+nav{
+	border:1px solid gold;
+}
+div{
+	height:300px;
+	width:300px;
+	border:1px solid red;
+	
+}
